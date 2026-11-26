@@ -22,7 +22,7 @@ public class TestAhorros {
 		
 		Hijo hijo = new Hijo(2, 4, 6);
 		
-		hijo.ahorrar(50);
+		hijo.ahorrar(50 * 0.5);
 		
 		System.out.println("Hijo " + hijo);
 
