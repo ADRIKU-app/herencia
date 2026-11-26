@@ -1,0 +1,15 @@
+package com.krakedev.herencia.test;
+
+import com.krakedev.herencia.Hija;
+
+public class TestPrivado {
+
+	public static void main(String[] args) {
+		
+		Hija hija = new Hija(5, 4);
+		
+		hija.guardarSecreto();
+
+	}
+
+}
