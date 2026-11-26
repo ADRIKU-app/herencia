@@ -4,6 +4,7 @@ public class Padre {
 
 	private int defectos;
 	private int virtudes;
+	private double totalAhorrado;
 
 //	@Override
 //	public String toString() {
@@ -23,10 +24,13 @@ public class Padre {
 
 	}
 
-	public String tostring() {
+	@Override
+	public String toString() {
+		return "Defectos: " + defectos + ", Virtudes: " + virtudes + ", Total ahorrado: " + totalAhorrado;
+	}
 
-		return "Hola";
-
+	public double getTotalAhorrado() {
+		return totalAhorrado;
 	}
 
 	public int getDefectos() {
@@ -45,10 +49,14 @@ public class Padre {
 		this.virtudes = virtudes;
 	}
 
+	public void setTotalAhorrado(double totalAhorrado) {
+		this.totalAhorrado = totalAhorrado;
+	}
+
 	public void imprimir() {
 
 		System.out.println("Virtudes: " + virtudes);
-		System.out.println("Virtudes: " + defectos);
+		System.out.println("Defectos: " + defectos);
 
 	}
 
@@ -56,6 +64,13 @@ public class Padre {
 
 		System.out.println("Esto no se hereda");
 
+	}
+
+	public void ahorrar(double monto) {
+		
+		// En ambas formas es lo mismo:
+		// totalAhorrado += monto;
+		totalAhorrado = totalAhorrado + monto;
 	}
 
 }

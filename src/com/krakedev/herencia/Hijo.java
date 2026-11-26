@@ -11,10 +11,19 @@ public class Hijo extends Padre {
 
 	}
 
+	// AMBAS FORMAS SON CORRECTAS:
+	// super.toString() ejecuta el método toString() definido en Padre.
+
+	// @Override
+	// public String toString() {
+	// return super.toString() + ", Juguetes: " + juguetes;
+	// }
+
 	@Override
 	public String toString() {
 
-		return "Defectos: " + getDefectos() + ", Virtudes: " + getVirtudes() + ", Juguetes: " + juguetes;
+		return "Defectos: " + getDefectos() + ", Virtudes: " + getVirtudes() + ", Juguetes: " + juguetes
+				+ ", Total Ahorrado: " + getTotalAhorrado();
 
 	}
 
