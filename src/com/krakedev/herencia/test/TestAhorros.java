@@ -8,23 +8,23 @@ public class TestAhorros {
 
 	public static void main(String[] args) {
 		
-		Padre padre = new Padre(5, 1);
+		Padre padre = new Padre("Carlos ", 5, 1);
 		
 		padre.ahorrar(50);
 		
-		System.out.println("Padre: " + padre);
+		System.out.println("PADRE: " + padre);
 		
-		Hija hija = new Hija(3, 6);
+		Hija hija = new Hija("Rosa ", 3, 6);
 		
 		hija.ahorrar(50);
 		
-		System.out.println("Hija: " + hija);
+		System.out.println("HIJA: " + hija);
 		
-		Hijo hijo = new Hijo(2, 4, 6);
+		Hijo hijo = new Hijo("Roberto ", 2, 4, 6);
 		
-		hijo.ahorrar(50 * 0.5);
+		hijo.ahorrar(50);
 		
-		System.out.println("Hijo " + hijo);
+		System.out.println("HIJO: " + hijo);
 
 
 	}

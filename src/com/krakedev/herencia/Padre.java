@@ -2,6 +2,7 @@ package com.krakedev.herencia;
 
 public class Padre {
 
+	private String nombre;
 	private int defectos;
 	private int virtudes;
 	private double totalAhorrado;
@@ -17,8 +18,9 @@ public class Padre {
 //
 //	}
 
-	public Padre(int virtudes, int defectos) {
+	public Padre(String nombre, int virtudes, int defectos) {
 
+		this.nombre = nombre;
 		this.virtudes = virtudes;
 		this.defectos = defectos;
 
@@ -26,11 +28,12 @@ public class Padre {
 
 	@Override
 	public String toString() {
-		return "Defectos: " + defectos + ", Virtudes: " + virtudes + ", Total ahorrado: " + totalAhorrado;
+		return "Nombre: " + nombre + ", Defectos: " + defectos + ", Virtudes: " + virtudes + ", Total ahorrado: "
+				+ totalAhorrado;
 	}
 
-	public double getTotalAhorrado() {
-		return totalAhorrado;
+	public String getNombre() {
+		return nombre;
 	}
 
 	public int getDefectos() {
@@ -39,6 +42,14 @@ public class Padre {
 
 	public int getVirtudes() {
 		return virtudes;
+	}
+
+	public double getTotalAhorrado() {
+		return totalAhorrado;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public void setDefectos(int defectos) {
@@ -67,7 +78,7 @@ public class Padre {
 	}
 
 	public void ahorrar(double monto) {
-		
+
 		// En ambas formas es lo mismo:
 		// totalAhorrado += monto;
 		totalAhorrado = totalAhorrado + monto;

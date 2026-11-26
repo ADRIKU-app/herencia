@@ -4,11 +4,16 @@ public class Hijo extends Padre {
 
 	private int juguetes;
 
-	public Hijo(int virtudes, int defectos, int juguetes) {
+	public Hijo(String nombre, int virtudes, int defectos, int juguetes) {
 
-		super(virtudes, defectos);
+		super(nombre, virtudes, defectos);
 		this.juguetes = juguetes;
 
+	}
+
+	@Override
+	public void ahorrar(double monto) {
+		super.ahorrar(monto * 0.5);
 	}
 
 	// AMBAS FORMAS SON CORRECTAS:
@@ -22,7 +27,7 @@ public class Hijo extends Padre {
 	@Override
 	public String toString() {
 
-		return "Defectos: " + getDefectos() + ", Virtudes: " + getVirtudes() + ", Juguetes: " + juguetes
+		return "Nombre: " + getNombre() + ", Defectos: " + getDefectos() + ", Virtudes: " + getVirtudes() + ", Juguetes: " + juguetes
 				+ ", Total Ahorrado: " + getTotalAhorrado();
 
 	}
